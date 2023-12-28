@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+/*@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@font-face{
+    font-family:"regular1";
+    src:url('../src/assets/fonts/Inter-Regular.ttf')
+}*/
+
+

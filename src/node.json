@@ -1,0 +1,101 @@
+[
+    {
+        "question":"What is NodeJS",
+        "answers":
+            {"a":"Which conc\r\n lisi    hon will be correct ,hkgmnhm;hmh;lmnvgucguvhv vvhbjbononohbhibhibjibjjjkjkbk",
+                 
+            "b":"technology",
+            "c":"maths",
+            "d":"Somthing else"
+        },
+        "order":"1"
+    },
+         {"question":"What is Node? Hey",
+         "answers":{
+            "a":":language",
+            "b":"tecnology",
+            "c":"maths",
+            "d":"Someething else"
+        },
+        "order":"2"
+    },
+    {"question":"What is Angular?",
+    "answers":{
+       "a":":langyuage",
+       "b":"tecnology",
+       "c":"maths",
+       "d":"Someething else"
+   },
+   "order":"3"
+},
+{"question":"What is CSS?",
+"answers":{
+  "a":":langyuage",
+  "b":"tecnology",
+  "c":"maths",
+  "d":"Someething else"
+},
+"order":"4"
+},
+{"question":"What is HTML?",
+"answers":{
+ "a":":langyuage",
+ "b":"tecnology",
+ "c":"maths",
+ "d":"Someething else"
+}, 
+"order":"5"
+},{"question":"What is Express?",
+"answers":{
+"a":":langyuage",
+"b":"tecnology",
+"c":"maths",
+"d":"Someething else"
+},
+"order":"6"
+},
+{"question":"What is Poxtgres?",
+    "answers":{
+       "a":":langyuage",
+       "b":"tecnology",
+       "c":"maths",
+       "d":"Someething else"
+   },
+   "order":"7"
+},
+{"question":"What is MySQL?",
+    "answers":{
+       "a":":langyuage",
+       "b":"tecnology",
+       "c":"maths",
+       "d":"Someething else"
+   }, 
+   "order":"8"
+   
+},{"question":"What is MongoDB?",
+"answers":{
+   "a":":langyuage",
+   "b":"tecnology",
+   "c":"maths",
+   "d":"Someething else"
+},
+"order":"9"
+
+
+},{"question":"What is ORM?",
+"answers":{
+"a":":langyuage",
+"b":"tecnology",
+"c":"maths",
+"d":"Someething else"
+},"order":"10"
+},
+{"question":"What is ORMu?",
+"answers":{
+"a":":langyuage",
+"b":"tecnology",
+"c":"maths",
+"d":"Someething else"
+},"order":"11"
+}
+]

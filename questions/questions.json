@@ -1,0 +1,312 @@
+{
+    "JavaScript":[
+            {
+            "question":"Which output will be produced by the code below:\n\t\tfunction getValue(condition){\n\t\t\t\tif (condition) {\n\t\t\t\t\tvar a = 2\n\t\t\t\t\treturn a\n\t\t\t\t} else {\n\t\t\t\treturn null\n\t\t\t\t\t}\t\n\t\t\t\t}\n\ngetValue()",
+            "answers":
+                {"a":"null",
+                "b":"TypeError",
+                "c":"undefined",
+                "d":"\"blue\""
+                }, 
+            "order":"1"
+        },
+             {"question":"Which output will be produced by the code below:\n\t\tfunction getValue(condition){\n\t\t\t\t if (condition) {\n\t\t\t\t\tlet a = 2\n\t\t\t\t\treturn a\n\t\t\t\t} else {\n\t\t\t\treturn null\n\t\t\t\t\t\t}\n\t\t\t\t}\n\n\tgetValue()",
+             "answers":{
+                "a":"null",
+                "b":"TypeError",
+                "c":"undefined",
+                "d":"blue"
+            },
+            "order":"2"
+        },
+        {"question":"Which output be produced by the code below:\n\t\tfor(let i=0; i<3;i++)\n\t\t\tconsole.log(i)\n\t\t\t\t}\n\t\t\t}\n\tconsole.log(i)",
+        "answers":{
+           "a":"0\n1\n2\n2",
+           "b":"2\n2",
+           "c":"ReferenceError: i is not defined",
+           "d":"undefined"
+       },
+       "order":"3"
+    },
+    {"question":"Which output be produced by the code below:\n\t\tfunction getValue(condition){\n\t\t\t\t if (condition) {\n\t\t\t\t\tvar a = 2\n\t\t\t\t\treturn a\n\t\t\t\t} else {\n\t\t\t\treturn null\n\t\t\t\t\t}\n\t\t\t\t}",
+    "answers":{
+      "a":"0\n1\n2\n3",
+      "b":"ReferenceError: i is not defined",
+      "c":"undefined",
+      "d":"0\n1\n2\n2"
+    },
+    "order":"4"
+    },
+    {"question":"Which output will be produced by the code below:\nfor (let i = 0; i<3:i++) {\n\t\t\t\tconsole.log(i)\n\t\t\t\t\t}\n\t\t\t\t\tconsole.log(i)",
+    "answers":{
+     "a":":0\n1\n2\n2",
+     "b":"ReferenceError: i is not defined",
+     "c":"undefined",
+     "d":"0\n1\n2\n\nundefined"
+    },
+    "order":"5"
+    },
+    {"question":"Which output will be produced by the code below:\nfor (var i = 0; i<3:i++) {\n\t\t\t\tconsole.log(i)\n\t\t\t\t\t}\n\t\t\t\t\tconsole.log(i)",
+        "answers":{
+         "a":":0\n1\n2\n2",
+         "b":"0\n1\n2\n3",
+         "c":"undefined",
+         "d":"0\n1\n2\nundefined"
+        },
+    "order":"6"
+    },
+    {"question":"Whis method obtains object's property?",
+        "answers":{
+           "a":"Object.getProperty(name_of_property)",
+           "b":"Object.defineProperty(name_of_property)",
+           "c":"Object.hasOwnProperty(name_of_property)",
+           "d":"Object['name_of_property']"
+       },
+       "order":"7"
+    },
+    {"question":"Which pattern loops through the object's properties?",
+        "answers":{
+           "a":"for .. in ..",
+           "b":"for .. of ..",
+           "c":"a) and b)",
+           "d":"map()"
+       },
+       "order":"8"
+    },{"question":"Which pattern loops through the array's values?",
+        "answers":{
+           "a":"for .. in ..",
+           "b":"for .. of ..",
+           "c":"b) and d)",
+           "d":"map()"
+       },
+    "order":"9"
+    },{"question":"which pattern is used for object creating?",
+    "answers":{
+    "a":"Object.assign()",
+    "b":"Object.create()",
+    "c":"new Object()",
+    "d":"both b) and c)"
+    },
+    "order":"10"
+    },{"question":"Which pattern is used for array's creating?",
+    "answers":{
+    "a":"Array.of()",
+    "b":"Array.from()",
+    "c":"new Array()",
+    "d":"Array.isArray()"
+    },
+    "order":"11"
+    },
+    {"question":"Which pattern is used for array's creating from object?",
+        "answers":{
+        "a":"Array.of()",
+        "b":"Array.from()",
+        "c":"new Array()",
+        "d":"Array.isArray()"
+        },
+        "order":"12"
+        }
+    ],
+    "NodeJS":[
+        {  "question":"What \t\t\tis Nod\n   3 eJS",
+            "answers":
+                {"a":"\t\t\t\tWhich conclisi\t\t\t\t\thon will be\n correct,\t\t\t\t\thkgmnhm;hmh;lmnvgucguvhv vvhbjbononohbhibhibjibjjjkjkbk",
+                "b":"\t\ttechnology",
+                "c":"\tmaths",
+                "d":"Somthing else"
+            },
+            "order":"1"
+        },
+             {"question":"Wha\t\t\tt is Node? \n1\t\t5\t\tHey",
+             "answers":{
+                "a":":language",
+                "b":"tecnology",
+                "c":"maths",
+                "d":"Someething else"
+            },
+            "order":"2"
+        },
+        {"question":"What\t\t\t\tis Angular?",
+        "answers":{
+           "a":"`<div>:\t\t\tlangy</div>uage`",
+           "b":"tecnology",
+           "c":"maths",
+           "d":"Someething else"
+       },
+       "order":"3"
+    },
+    {"question":"What is CSS?",
+    "answers":{
+      "a":":langyuage",
+      "b":"tecnology",
+      "c":"maths",
+      "d":"Someething else"
+    },
+    "order":"4"
+    },
+    {"question":"What is HTML?",
+    "answers":{
+     "a":":langyuage",
+     "b":"tecnology",
+     "c":"maths",
+     "d":"Someething else"
+    }, 
+    "order":"5"
+    },
+    {"question":"What is Express?",
+    "answers":{
+    "a":":langyuage",
+    "b":"tecnology",
+    "c":"maths",
+    "d":"Someething else"
+    },
+    "order":"6"
+    },
+    {"question":"What is Poxtgres?",
+        "answers":{
+           "a":":langyuage",
+           "b":"tecnology",
+           "c":"maths",
+           "d":"Someething else"
+       },
+       "order":"7"
+    },
+    {"question":"What is MySQL?",
+        "answers":{
+           "a":":langyuage",
+           "b":"tecnology",
+           "c":"maths",
+           "d":"Someething else"
+       }, 
+       "order":"8"
+    },
+    {"question":"What is MongoDB?",
+    "answers":{
+       "a":":langyuage",
+       "b":"tecnology",
+       "c":"maths",
+       "d":"Someething else"
+    },
+    "order":"9"
+    },
+    {"question":"What is ORM?",
+    "answers":{
+    "a":":langyuage",
+    "b":"tecnology",
+    "c":"maths",
+    "d":"Someething else"
+    },"order":"10"
+    },
+    {"question":"What is ORMu?",
+    "answers":{
+    "a":":langyuage",
+    "b":"tecnology",
+    "c":"maths",
+    "d":"Someething else"
+    },"order":"11"
+    }],
+   
+"React":[
+    {
+        "question":"which argument(s) are passed into React's render() method:",
+        "answers":
+            {"a":"render(ReactElement element)",
+            "b":"render(DOMElement container",
+            "c":"render(ReactELement element,\nDOMElement container\n[function callback*]\n* - optional",
+            "d":"function callback"
+        },
+        "order":"1"
+    },
+        {"question":"which argument(s) are passed into React's createElement() method:",
+        "answers":{
+        "a":"createElement(string/ReactClass type, [object props], [children...]",
+        "b":"createElement(string, [object props], [children...]",
+        "c":"createElement(ReactClass type, [object props], [children...]",
+        "d":"createElement([object props], [children...]"
+    },
+    "order":"2"
+    },
+    {"question":"In React createElement('h1','{}','Hello world') h1 is:" ,
+    "answers":{
+        "a":"type",
+        "b":"props",
+        "c":"children",
+        "d":"Someething else"
+    }, "order":"3"
+    },
+    {"question":"What is CSS?",
+    "answers":{
+      "a":":langyuage",
+      "b":"tecnology",
+      "c":"maths",
+      "d":"Someething else"
+    },
+    "order":"4"
+    },
+    {"question":"What is HTML?",
+    "answers":{
+     "a":":langyuage",
+     "b":"tecnology",
+     "c":"maths",
+     "d":"Someething else"
+    },
+    "order":"5"
+    },{"question":"What is Express?",
+    "answers":{
+    "a":":langyuage",
+    "b":"tecnology",
+    "c":"maths",
+    "d":"Someething else"
+    },
+    "order":"6"
+    },
+    {"question":"What is Poxtgres?",
+        "answers":{
+           "a":":langyuage",
+           "b":"tecnology",
+           "c":"maths",
+           "d":"Someething else"
+       },
+       "order":"7"
+    },
+    {"question":"What is MySQL?",
+        "answers":{
+           "a":":langyuage",
+           "b":"tecnology",
+           "c":"maths",
+           "d":"Someething else"
+       },
+       "order":"8"
+    },
+    {"question":"What is MongoDB?",
+    "answers":{
+       "a":":langyuage",
+       "b":"tecnology",
+       "c":"maths",
+       "d":"Someething else"
+    },
+    "order":"9"
+    },
+    {"question":"What is ORM?",
+    "answers":{
+    "a":":langyuage",
+    "b":"tecnology",
+    "c":"maths",
+    "d":"Someething else"
+    },
+    "order":"10"
+    },{
+    "question":"What is ORMR?",
+    "answers":{
+    "a":":langyuage",
+    "b":"tecnology",
+    "c":"maths",
+    "d":"Someething else"
+    },
+    "order":"11"
+    }]
+}
+ 
+
+
+     
