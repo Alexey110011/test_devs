@@ -10,7 +10,7 @@ require('./passport')
 const JSONquestions = require('./questions/questions.json')
 const JSONanswers = require('./answers/answers.json')
 
-function fillTenRandomQuestions(array){
+/*function fillTenRandomQuestions(array){
   const tenRandomQuestions = []
   while(tenRandomQuestions.length<10){
     let i = Math.floor(Math.random()*array.length)
@@ -19,9 +19,9 @@ function fillTenRandomQuestions(array){
     }
    console.log('Ten',tenRandomQuestions)
    return tenRandomQuestions
-}
+}*/
 
-function getAnswers(obj){
+/*function getAnswers(obj){
   const entries= []
   for(let k in obj){
      const mapped =   obj[k].map(item=>Object.entries(item))
@@ -29,9 +29,9 @@ function getAnswers(obj){
       console.log('Foo',entries)
     } 
     return entries
-}
+}*/
 
-function full(ten, answ){
+/*function full(ten, answ){
   const searchedAnswer = ten.map(item=>{
     for (let i=0;i<answ.length;i++){
       console.log('Full',answ[i][0][0])
@@ -50,7 +50,7 @@ function mapping(ten, answ){
     arrayOfAnswers.push(full3)
   }
   return arrayOfAnswers
-}
+}*/
 
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended:true}))
@@ -83,10 +83,15 @@ let auth = (req, res, next)=>{
   }
 }
 
-app.get('/a', (req, res)=>{
+/*app.get('/a', (req, res)=>{
     res.send('5000')
     console.log('A')
+})*/
+app.get('/getTests',(req, res)=>{
+  console.log(JSONquestions,JSONanswers)
+  res.send({questions:JSONquestions, answers:JSONanswers})
 })
+
 app.post('/post'/*, auth*/,(req, res)=>{
     console.log(req.body.answer)
     models.passTest(req,res)
@@ -150,10 +155,5 @@ app.post('/checkuser', (req, res)=>{
   console.log(req.body)
   res.send(req.body)
 })
-
-app.get('/getTests',(req, res)=>{
-  console.log(JSONquestions,JSONanswers)
-  res.send({questions:JSONquestions, answers:JSONanswers})
-})
   
-app.listen(port,()=> console.log(`Server is listeninf at ${port}`))
+app.listen(port,()=> console.log(`Server is listening at ${port}`))

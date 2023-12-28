@@ -164,7 +164,7 @@ const passTestFromLocalStorage = (req, res)=>{
     })
 }  
 
-        const findResult =(req, res)=>{
+        /*const findResult =(req, res)=>{
           const {fullname,test, answer} = req.body
           console.log(answer)
           const topic = results[`${test}`]
@@ -177,12 +177,12 @@ const passTestFromLocalStorage = (req, res)=>{
           const amount = result.reduce((acc, current)=> acc+current,ini)
           console.log('Result',result, amount )
           return amount
-        }
+        }*/
 
         module.exports = {passTest,
                           passTestFromLocalStorage,
                           passedTest,
-                          findResult,
+                          //findResult,
                           register,
                           login, 
                           checkUserByNameSurname,

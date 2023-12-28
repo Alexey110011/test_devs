@@ -154,7 +154,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
       console.log('Passed',passed)
       return passed
     }*/
-    fetch('http://localhost:7000/isTestPassed',{
+    fetch('https://beamish-treacle-2d1dc7.netlify.app/isTestPassed',{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -181,7 +181,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
 
    useEffect(()=>{
     //navigate('/loader')
-    fetch('http://localhost:7000/getTests', {cache:"no-store"})
+    fetch('https://beamish-treacle-2d1dc7.netlify.app/getTests', {cache:"no-store"})
     .then(response=>response.json())
     .then(data=>{/*return data/*console.log('Server',data);*/
     const ten = getTests(data.questions)
@@ -234,7 +234,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
       useEffect(()=>{
         if(localStorage.getItem('student')){
           const tok =  getToken()
-          fetch('http://localhost:7000/postFromLocalStorage',{
+          fetch('https://beamish-treacle-2d1dc7.netlify.app/postFromLocalStorage',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
