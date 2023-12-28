@@ -88,7 +88,7 @@ const Question = ({topic,sendResult,tests}:{topic:string,sendResult:SendResult,t
                 test: topic,
                 answer:answer,
                 result:(amountRef.current.amount>=7)?"passed":"failed", 
-                timestamp:new Date().getFullYear()+'-'+ (new Date().getMonth()+1)+ new Date().getDate() +' ' +new Date().getHours() +':'+ new Date().getMinutes() + ':' + new Date().getSeconds()
+                timestamp:new Date().getFullYear()+'-'+ (new Date().getMonth()+1)+ ' ' + new Date().getDate() +' ' +new Date().getHours() +':'+ new Date().getMinutes() + ':' + new Date().getSeconds()
             })
         })
         .then(response=>response.json())

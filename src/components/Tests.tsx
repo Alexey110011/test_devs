@@ -180,7 +180,6 @@ const ifPassed = useCallback((array:RowItem[])=>{
 
 
    useEffect(()=>{
-    
     //navigate('/loader')
     fetch('http://localhost:7000/getTests', {cache:"no-store"})
     .then(response=>response.json())
@@ -214,11 +213,6 @@ const ifPassed = useCallback((array:RowItem[])=>{
       )
 
       useEffect(()=>{
-        //const  topics = ["JavaScript", "NodeJS", "React"]
-        //function checkIsFailed(topic:string){
-
-        
-        //const topics = ['JavaScript', 'NodeJS','React']
         type ObjectKey = keyof typeof howManyFailed
         //let myVar = topic as ObjectKey
         for (let top in howManyFailed){
