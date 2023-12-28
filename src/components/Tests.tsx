@@ -184,7 +184,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
 
    useEffect(()=>{
     //navigate('/loader')
-    fetch('https://beamish-treacle-2d1dc7.netlify.app/getTests', {cache:"no-store"})
+    fetch('https://activities-server-db.herokuapp.com/getTests', {cache:"no-store"})
     .then(response=>response.json())
     .then(data=>{/*return data/*console.log('Server',data);*/
     const ten = getTests(data.questions)
