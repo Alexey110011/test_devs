@@ -150,12 +150,12 @@ const passTest = (req, res)=>{
 }  
 
 const passTestFromLocalStorage = (req, res)=>{
-    const {email,test, answer, result/*, timestamp*/} = req.body.student
+    const {email,test, answer, result, timestamp} = req.body.student
     console.log('AnswerLS', req.body.student)
     const [n1, n2, n3, n4, n5, n6, n7, n8, n9,n10] = answer
    
     return new Promise (function(resolve, reject){
-        pool.query(`INSERT INTO tests (email, test, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, result) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING *`, [email, test, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, result/*, timestamp*/], (error, results) => {
+        pool.query(`INSERT INTO tests (email, test, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, result, timestamp) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *`, [email, test, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, result, timestamp], (error, results) => {
             if (error) {
                 reject(error)
               }
