@@ -212,6 +212,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
         ,[sendPassed,/*passedRef.current.passed,*/ alreadyPassed]
       )
 
+/*eslint-disable*/
       useEffect(()=>{
         type ObjectKey = keyof typeof howManyFailed
         //let myVar = topic as ObjectKey
@@ -223,6 +224,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
           console.log('FAiled', howManyFailed, alreadyFailed)
           //topics.forEach(element=>checkIsFailed(element))
       },[howManyFailed])
+/*eslint-enable*/
 
       function getToken(){
       console.log(localStorage['token'],'Student',localStorage['student'])
