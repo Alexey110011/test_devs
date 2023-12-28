@@ -19,10 +19,10 @@
             },
             "order":"2"
         },
-        {"question":"Which output be produced by the code below:\n\t\tfor(let i=0; i<3;i++)\n\t\t\tconsole.log(i)\n\t\t\t\t}\n\t\t\t}\n\tconsole.log(i)",
+        {"question":"Which output be produced by the code below:\n\t\tfor(let i=0; i<3;i++){\n\t\t\tconsole.log(i)\n\t\t\t\t}\n\t\t\t}\n\tconsole.log(i)",
         "answers":{
-           "a":"0\n1\n2\n2",
-           "b":"2\n2",
+           "a":"0\n\n1\n\n2\n\n2",
+           "b":"2\n\n2",
            "c":"ReferenceError: i is not defined",
            "d":"undefined"
        },
@@ -30,28 +30,28 @@
     },
     {"question":"Which output be produced by the code below:\n\t\tfunction getValue(condition){\n\t\t\t\t if (condition) {\n\t\t\t\t\tvar a = 2\n\t\t\t\t\treturn a\n\t\t\t\t} else {\n\t\t\t\treturn null\n\t\t\t\t\t}\n\t\t\t\t}",
     "answers":{
-      "a":"0\n1\n2\n3",
+      "a":"0\n\n1\n\n2\n\n3",
       "b":"ReferenceError: i is not defined",
       "c":"undefined",
-      "d":"0\n1\n2\n2"
+      "d":"0\n\n1\n\n2\n\n2"
     },
     "order":"4"
     },
     {"question":"Which output will be produced by the code below:\nfor (let i = 0; i<3:i++) {\n\t\t\t\tconsole.log(i)\n\t\t\t\t\t}\n\t\t\t\t\tconsole.log(i)",
     "answers":{
-     "a":":0\n1\n2\n2",
+     "a":"0\n\n1\n\n2\n\n2",
      "b":"ReferenceError: i is not defined",
      "c":"undefined",
-     "d":"0\n1\n2\n\nundefined"
+     "d":"0\n\n1\n\n2\n\nundefined"
     },
     "order":"5"
     },
     {"question":"Which output will be produced by the code below:\nfor (var i = 0; i<3:i++) {\n\t\t\t\tconsole.log(i)\n\t\t\t\t\t}\n\t\t\t\t\tconsole.log(i)",
         "answers":{
-         "a":":0\n1\n2\n2",
-         "b":"0\n1\n2\n3",
+         "a":"0\n\n1\n\n2\n\nn2",
+         "b":"0\n\n1\n\n2\n\n3",
          "c":"undefined",
-         "d":"0\n1\n2\nundefined"
+         "d":"0\n\n1\n\n2\n\nundefined"
         },
     "order":"6"
     },

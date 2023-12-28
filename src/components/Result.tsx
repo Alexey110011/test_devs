@@ -6,10 +6,10 @@ import {useNavigate} from 'react-router'
         navigate('/')
     }
     return (
-            <div>
+            <div style = {{margin:"100px auto"}}>
                 {result&&result>=7?<Success/>:<Fail/>}
-                {result}
-                <button onClick = {home}>Home</button>
+                You have {result} correct answer(s)
+                <button style = {{display:"block", margin:'20px auto'}}onClick = {home}>Home</button>
             </div>
     )
 }
@@ -18,7 +18,7 @@ export default Result
 
 const Success = () =>{
     return (
-        <div>
+        <div style = {{textAlign:"center", marginBottom:"10px"}}>
             <div className = "rond green"></div>
         </div>
     )
@@ -26,7 +26,7 @@ const Success = () =>{
 
 const Fail = ()=>{
     return (
-        <div>
+        <div style = {{textAlign:"center", marginBottom:"10px"}}>
             <div className = "rond red"></div>
         </div>
     )

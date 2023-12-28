@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef, useCallback} from 'react'
 import { useNavigate } from 'react-router'
 import {AllData, QuestionType, SendResult, Amount} from '../types'
-
+//https://beamish-treacle-2d1dc7.netlify.app
 const Question = ({topic,sendResult,tests}:{topic:string,sendResult:SendResult,tests:AllData})=>{
     type ObjectKey = keyof typeof tests.answers
     const myVar = topic as ObjectKey
@@ -78,7 +78,7 @@ const Question = ({topic,sendResult,tests}:{topic:string,sendResult:SendResult,t
             timestamp:new Date().getFullYear()+'-'+ (new Date().getMonth()+1) + '-' + (`${new Date().getDate()<10?('0'+ new Date().getDate()):new Date().getDate()}`) +' ' + (`${new Date().getHours()<10?('0'+new Date().getHours()):new Date().getHours()}`)+':'+ (`${new Date().getMinutes()<10?('0'+ new Date().getMinutes()):new Date().getMinutes()}`) + ':' + (`${new Date().getSeconds()<10?('0'+ new Date().getSeconds()):new Date().getSeconds()}`)
         }
         localStorage.setItem(`student`,JSON.stringify(userResponse))
-        fetch('https://beamish-treacle-2d1dc7.netlify.app/post',{
+        fetch('https://activities-server-db.herokuapp.com/post',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -169,11 +169,14 @@ return (
             <h2 style = {{color:(alert)?"red":"black"}}>{minutes}:{seconds}</h2>
             <form>
                 <div className = "radio_wrapper">
-                    <div className = "question">{currentQuestion.question.split('\n').map((line,i)=>{;return(<div key = {i}>{whitefy(line)}</div>)})}</div>
-                    <div className = "radio">a<input type = "radio" value = "a" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "a"}/>{currentQuestion.answers.a.split('\n').map((line,i)=>{return(<div key = {i}>{whitefy(line)}</div>)})}</div>
-                    <div className = "radio">b<input type = "radio" value = "b" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "b"}/>{currentQuestion.answers.b.split('\n').map((line,i)=>{return(<div key = {i}>{`${whitefy(line)}`}</div>)})}</div>
-                    <div className = "radio">c<input type = "radio" value = "c" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "c"}/>{currentQuestion.answers.c.split('\n').map((line,i)=>{return(<div key = {i}>{`${whitefy(line)}`}</div>)})} </div>
-                    <div className = "radio">d<input type = "radio" value = "d" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "d"}/>{currentQuestion.answers.d.split('\n').map((line,i)=>{return(<div key = {i}>{`${whitefy(line)}`}</div>)})} </div>
+                    <div className = "question" style = {{paddingLeft:"10px"}}>{currentQuestion.question.split('\n').map((line,i)=>{;return(<div style = {{paddingLeft:"10px"}} key = {i}>{whitefy(line)}</div>)})}</div>
+                    
+                <div style = {{marginTop:"5px"}}>
+                        <div className = "radio"><div>a</div><div><input type = "radio" value = "a" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "a"}/></div><div>{currentQuestion.answers.a.split('\n').map((line,i)=>{return(<div style ={{display:"block"}} key = {i}>{whitefy(line)}</div>)})}</div></div>
+                        <div className = "radio"><div>b</div><div><input type = "radio" value = "b" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "b"}/></div><div>{currentQuestion.answers.b.split('\n').map((line,i)=>{return(<div style ={{display:"block"}} key = {i}>{whitefy(line)}</div>)})}</div></div>
+                        <div className = "radio"><div>c</div><div><input type = "radio" value = "c" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "c"}/></div><div>{currentQuestion.answers.c.split('\n').map((line,i)=>{return(<div style ={{display:"block"}} key = {i}>{whitefy(line)}</div>)})} </div></div>
+                        <div className = "radio"><div>d</div><div><input type = "radio" value = "d" name = "answer" onChange = {e=>{radioChange(e)}} checked = {variant === "d"}/></div><div>{currentQuestion.answers.d.split('\n').map((line,i)=>{return(<div style ={{display:"block"}} key = {i}>{whitefy(line)}</div>)})} </div></div>
+                    </div>
                 </div>
                 <button onClick = {nextQuestion} className = {(!buttonValue?"btn btn-info":"btn btn-success")} disabled = {bu}>{(!buttonValue)?"Next":"Finish"}</button>
             </form>

@@ -72,11 +72,6 @@ const  sendTests = useCallback((arg:AllData)=>{
 
   return (
     <div className="App">
-      <select className = "language" onChange = {(e)=>{chooseLanguage(e.currentTarget.value);console.log("CurrentLanguge", e.currentTarget.value)}}>
-            <option value = "eng" >eng</option>
-            <option value = "bel" >бел</option>
-            <option value = "rus" >рус</option>
-          </select>
       <Routes>
         <Route path = "/" element = {<Tests choosetopic = {chooseTopic} language = {language} sendTests = {sendTests} sendFailed = {sendFailed} sendPassed = {sendPassed}/>}/>
         <Route path = "/loader" element = {<Loader/>}/>

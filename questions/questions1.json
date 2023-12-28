@@ -1,7 +1,7 @@
 {
     "JavaScript":{
         "eng":[{
-            "question":"Which output will be produced by the code below:\n\t\tfunction getValue(condition){\n\t\t\t\tif (condition) {\n\t\t\t\t\tvar a = 2\n\t\t\t\t\treturn a\n\t\t\t\t} else {\n\t\t\t\treturn null\n\t\t\t\t\t}\t\n\t\t\t\t}\n\ngetValue()",
+            "question":"Which output will be produced by the code below:\n\t\tfunction getValue(condition){\n\t\t\t\t\t\t\tif (condition) {\n\t\t\t\t\t\t\t\tvar a = 2\n\t\t\t\t\t\t\t\treturn a\n\t\t\t\t} else {\n\t\t\t\treturn null\n\t\t\t\t\t}\t\n\t\t\t\t}\n\ngetValue()",
             "answers":
                 {"a":"null",
                 "b":"TypeError",

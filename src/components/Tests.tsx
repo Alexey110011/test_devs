@@ -45,6 +45,7 @@ const Tests = (/*{choosetopic=(f:any)=>f, language:any, sendTests=(f:any)=>f, se
       type ObjectKey=keyof typeof alreadyFailed
       const myVar = topic as ObjectKey
       return(
+        <div>
         <div className = "tests_topic">
             <img src = {(topic==="JavaScript")?JavaScript:(topic==="NodeJS")?NodeJS:React} alt = {topic}/>
             <h2 className = "topic" ref = {givenref}>{topic}</h2>
@@ -60,13 +61,15 @@ const Tests = (/*{choosetopic=(f:any)=>f, language:any, sendTests=(f:any)=>f, se
                           onClick = {topic==="JavaScript"?how:topic==="NodeJS"?how1:how2}>Start
                   </button>
             </Link>
-            <div className = {(alreadyPassed[`${myVar}`])?"vis":"hid"}>
+            
+        </div>
+        <div className = {(alreadyPassed[`${myVar}`])?"vis":"hid"}>
                 The test is already passed
             </div>
-            <div className = {(alreadyFailed[`${myVar}`])?"vis":"hid"} style = {{color:"orange"}}>
+        <div className = {(alreadyFailed[`${myVar}`])?"vis":"hid"} style = {{color:"orange"}}>
                 The test is failed
-            </div>
         </div>
+      </div>
     )
   }
   const chooseTenAnswers = useCallback((arrayAnswers:string[], arrayQuestions:QuestionType[]):any=>{
@@ -154,7 +157,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
       console.log('Passed',passed)
       return passed
     }*/
-    fetch('https://beamish-treacle-2d1dc7.netlify.app/isTestPassed',{
+    fetch('https://activities-server-db.herokuapp.com/isTestPassed',{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -234,7 +237,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
       useEffect(()=>{
         if(localStorage.getItem('student')){
           const tok =  getToken()
-          fetch('https://beamish-treacle-2d1dc7.netlify.app/postFromLocalStorage',{
+          fetch('https://activities-server-db.herokuapp.com/postFromLocalStorage',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -278,9 +281,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
             <Item topic = {'JavaScript'} givenref={javascriptRef}/>
             <Item topic = {'NodeJS'} givenref={nodeRef}/>
             <Item topic = {'React'} givenref={reactRef}/>
-            <Link to ="/login" state={{prevState:location.pathname}}>Lin</Link>
-              <button onClick ={()=>{localStorage.clear();console.log(localStorage)}}>Removes</button> 
-        </div>
+          </div>
     </div>
      )
 }
