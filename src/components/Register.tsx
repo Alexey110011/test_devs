@@ -15,7 +15,7 @@ const Register = ({sendAuthenticated=(f:any)=>f}) => {
     function onSubmit(e:React.ChangeEvent<HTMLFormElement>){
         e.preventDefault()
         if(!userAlreadyExists&&!emailAlreadyExists&&passwordRef.current.value&&nameRef.current.value&&surnameRef.current.value){
-            fetch("http://localhost:7000/register",{
+            fetch("https://activities-server-db.herokuapp.com/registerStudent",{
                 headers: {
                     "Content-Type":"application/json"},
                 method:"POST",
@@ -35,9 +35,9 @@ const Register = ({sendAuthenticated=(f:any)=>f}) => {
             else{setFormNotCompleted(true)}
         }
     
-    function checkingRegExpEmail(){
+    function checkEmail(){
         setEmail(emailRef.current.value)
-        fetch('http://localhost:7000/checkRegExpEmail', {
+        fetch('https://activities-server-db.herokuapp.com/checkStudentEmail', {
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -62,7 +62,7 @@ const Register = ({sendAuthenticated=(f:any)=>f}) => {
     }
 
     function checkUser(){
-        fetch('http://localhost:7000/ch', {
+        fetch('https://activities-server-db.herokuapp.com/ch', {
             method:"POST",
             headers:{
                 "Content-Type":"application/json"},
@@ -102,7 +102,7 @@ const Register = ({sendAuthenticated=(f:any)=>f}) => {
                     <div className = {(userAlreadyExists)?"vis alert":"hid"}>This student is already exists</div>
                     <div className = "form-group form_group">
                         <label htmlFor = "email">Email</label>
-                        <input type = "text" id = "email" name ="email" ref ={emailRef} onChange = {checkingRegExpEmail}/>
+                        <input type = "text" id = "email" name ="email" ref ={emailRef} onChange = {checkEmail}/>
                     </div>
 
                     <div>

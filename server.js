@@ -92,7 +92,7 @@ app.get('/getTests',(req, res)=>{
   res.send({questions:JSONquestions, answers:JSONanswers})
 })
 
-app.post('/post'/*, auth*/,(req, res)=>{
+app.post('/postTest'/*, auth*/,(req, res)=>{
     console.log(req.body.answer)
     models.passTest(req,res)
     .then(response => {
@@ -103,7 +103,7 @@ app.post('/post'/*, auth*/,(req, res)=>{
     })
  })
 
-app.post('/postFromLocalStorage'/*, auth*/,(req, res)=>{
+app.post('/postTestFromLocalStorage'/*, auth*/,(req, res)=>{
   console.log(req.body.answer)
   models.passTestFromLocalStorage(req,res)
   .then(response => {
@@ -123,7 +123,7 @@ app.post('/isTestPassed', (req, res)=>{
       console.log(error)})
 })
 
-app.post('/register', (req, res)=>{
+app.post('/registerStudent', (req, res)=>{
     models.register (req, res)
   .then(response => {
     res.status(200).send(response);
@@ -134,7 +134,7 @@ app.post('/register', (req, res)=>{
   })
 })
 
-app.post('/login', (req, res)=>{
+app.post('/loginStudent', (req, res)=>{
   console.log(2,req.body)
     models.login(req,res)
 })
@@ -146,14 +146,14 @@ app.post('/ch',(req, res)=>{
   .catch(err=>console.log(err))
 })
 
-app.post('/checkRegExpEmail', (req, res)=>{
+app.post('/checkStudentEmail', (req, res)=>{
   models.checkRegExpEmail(req)
   .then(response=>{res.send(response);console.log(response)})
 })
 
-app.post('/checkuser', (req, res)=>{
+/*app.post('/checkuser', (req, res)=>{
   console.log(req.body)
   res.send(req.body)
-})
+})*/
   
 app.listen(port,()=> console.log(`Server is listening at ${port}`))

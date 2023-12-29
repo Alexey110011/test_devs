@@ -237,7 +237,7 @@ const ifPassed = useCallback((array:RowItem[])=>{
       useEffect(()=>{
         if(localStorage.getItem('student')){
           const tok =  getToken()
-          fetch('https://activities-server-db.herokuapp.com/postFromLocalStorage',{
+          fetch('https://activities-server-db.herokuapp.com/postTestFromLocalStorage',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

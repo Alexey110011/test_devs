@@ -78,7 +78,7 @@ const Question = ({topic,sendResult,tests}:{topic:string,sendResult:SendResult,t
             timestamp:new Date().getFullYear()+'-'+ (new Date().getMonth()+1) + '-' + (`${new Date().getDate()<10?('0'+ new Date().getDate()):new Date().getDate()}`) +' ' + (`${new Date().getHours()<10?('0'+new Date().getHours()):new Date().getHours()}`)+':'+ (`${new Date().getMinutes()<10?('0'+ new Date().getMinutes()):new Date().getMinutes()}`) + ':' + (`${new Date().getSeconds()<10?('0'+ new Date().getSeconds()):new Date().getSeconds()}`)
         }
         localStorage.setItem(`student`,JSON.stringify(userResponse))
-        fetch('https://activities-server-db.herokuapp.com/post',{
+        fetch('https://activities-server-db.herokuapp.com/postTest',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

@@ -14,7 +14,7 @@ const Login= ()=>{
 
     function onSubmit(e:React.ChangeEvent<HTMLFormElement>){
         e.preventDefault()
-        fetch('http://localhost:7000/login',{
+        fetch('https://activities-server-db.herokuapp.com/loginStudent',{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'},

@@ -98,7 +98,7 @@ const setPassword = function(user,password){
         }, process.env.JWT_SECRET)
     }
 
-const getUserByName= (req)=>{
+const getStudentByName= (req)=>{
     console.log(req)
     const {name} = req.body
     return new Promise(function (resolve, reject){
@@ -111,7 +111,7 @@ const getUserByName= (req)=>{
     })
 }
 
-const getUserByEmail = (req)=>{
+const getStudentByEmail = (req)=>{
     console.log(req.email)
     const email = req.email
     return new Promise(function (resolve, reject){
@@ -124,7 +124,7 @@ const getUserByEmail = (req)=>{
     })
 }
 
-const getRegExpName = async (req)=>{
+const getRegExpStudentName = async (req)=>{
     console.log(100,req.body)
     const reg = req.body.reg
     console.log(reg)
@@ -138,7 +138,8 @@ const getRegExpName = async (req)=>{
             })
     })
 }
-const getRegExpEmail = async (req)=>{
+
+const getRegExpStudentEmail = async (req)=>{
     console.log(100,req.body)
     const reg = req.body.reg
     console.log(reg)
@@ -151,7 +152,7 @@ const getRegExpEmail = async (req)=>{
                     resolve (results.rows)
             })
     })
-}
+}*/
     
     module.exports = {
         setPassword,
@@ -159,8 +160,8 @@ const getRegExpEmail = async (req)=>{
         login,
         validPassword,
         generateJWT,
-        getUserByName,
-        getUserByEmail,
-        getRegExpName,
-        getRegExpEmail
+        getStudentByName,
+        getStudentByEmail,
+        getRegExpStudentName,
+        getRegExpStudentEmail
     }
